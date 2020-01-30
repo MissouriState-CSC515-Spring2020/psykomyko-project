@@ -1,7 +1,7 @@
-# Repository for class project
+# Build instructions
 
 
     1. 'npm run build' to build the project.
-    
+
     2. 'npm start' to launch the application.
 
