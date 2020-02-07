@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import '../App.css'
 
-const Example = (props) => {
+const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -28,14 +28,14 @@ const Example = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/public/categories.html">Categories</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="https://github.com/MissouriState-CSC515-Spring2020/psykomyko-project">GitHub</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Categories
+                Items
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
@@ -51,11 +51,11 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Photo Project</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default Example;
+export default Navigation;

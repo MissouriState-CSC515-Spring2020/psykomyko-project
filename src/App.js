@@ -18,8 +18,7 @@ export default class App extends React.Component {
           <p>Checkpoint 2</p>
           <p className="lead">
           </p>
-        </Jumbotron>
-         
+        </Jumbotron>   
 
       </div>
     );
