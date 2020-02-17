@@ -1,3 +1,7 @@
-# Repository for class project
+# Build instructions
 
-This readme is a placeholder that should be replaced
+
+    1. 'npm run build' to build the project.
+
+    2. 'npm start' to launch the application.
+
