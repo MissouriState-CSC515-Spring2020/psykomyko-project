@@ -22,7 +22,7 @@ export default class App extends React.Component {
           <h1 className="display-3">CSC515 School Project</h1>
           <p className="lead">Welcome to my project!</p>
           <hr className="my-2" />
-          <p>Checkpoint 3</p>
+          <p>Checkpoint 4</p>
           <p className="lead">
           </p>
         </Jumbotron>
