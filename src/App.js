@@ -7,7 +7,6 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import VideoGames from "./components/videogames";
 import Movies from './components/movies';
-import Categories from './components/categories';
 import { Link } from 'react-router-dom';
 import { Switch } from 'react-router';
 
@@ -22,7 +21,7 @@ export default class App extends React.Component {
           <h1 className="display-3">CSC515 School Project</h1>
           <p className="lead">Welcome to my project!</p>
           <hr className="my-2" />
-          <p>Checkpoint 4</p>
+          <p>Checkpoint 5</p>
           <p className="lead">
           </p>
         </Jumbotron>
@@ -32,19 +31,15 @@ export default class App extends React.Component {
             <Link to ='/'>Home</Link>
           </li>
           <li>
-            <Link to ='/videogames'>Video Games</Link>
+            <Link to ='/videogames'>Video Games - Videos</Link>
           </li>
           <li>
-            <Link to ='/movies'>Movies</Link>
-          </li>
-          <li>
-            <Link to ='/categories'>Categories</Link>
-          </li>
+            <Link to ='/movies'>Movies - Videos</Link>
+          </li>                 
         </ul>
             <Switch>              
               <Route path = '/videogames' component={VideoGames}/>
-              <Route path = '/movies' component={Movies}/>
-              <Route path = '/categories' component={Categories}/>
+              <Route path = '/movies' component={Movies}/>                            
             </Switch>
       </div>
       </BrowserRouter>

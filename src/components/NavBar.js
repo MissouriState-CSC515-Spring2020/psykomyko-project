@@ -26,10 +26,7 @@ const Navigation = (props) => {
         <NavbarBrand href="/">MSU School Project</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/public/categories.html">Categories</NavLink>
-            </NavItem>
+          <Nav className="mr-auto" navbar>            
             <NavItem>
               <NavLink href="https://github.com/MissouriState-CSC515-Spring2020/psykomyko-project">GitHub</NavLink>
             </NavItem>
@@ -51,7 +48,7 @@ const Navigation = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Photo Project</NavbarText>
+          <NavbarText>YouTube API Project</NavbarText>
         </Collapse>
       </Navbar>
     </div>

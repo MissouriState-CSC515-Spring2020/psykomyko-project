@@ -1,25 +1,51 @@
 import React from 'react';
 
-export default class VideoGames extends React.Component { 
 
-  render() {
-    return (
-      <div className = "main-container">
-          <head>
-            <meta charset="utf-8" />    
-            <meta name="viewport" content="width=device-width, initial-scale=2" />
-            <title>Video Games!</title> 
-          </head>
-          <body>
-            <div class="container">
-            <header>
-                <img src="Images/game_logo_collage_by_regnoart-dbjhp96.jpg"/>              
-                           
-            </header>  
+const API = 'AIzaSyDEylJcQqwVKDxZ-RN9nb4vVnYZxmAlqCo';
+const channelID = 'UCK9_x1DImhU-eolIay5rb2Q';
+const result = 5;
 
-            </div> 
-           </body>        
-      </div>
+
+
+var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
+
+export default class Movies extends React.Component { 
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      YTvideos: []
+    };
+    this.clicked = this.clicked.bind(this);
+  }
+
+clicked(){
+  fetch(finalURL)
+    .then((response) => response.json())
+    .then((responseJson) => {      
+      const YTvideos = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
+      this.setState({YTvideos});
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+  render(){    
+
+    return(
+      <div>
+        <button onClick={this.clicked}>Get youtube videos</button>
+          {
+            this.state.YTvideos.map((link, i) => {              
+              var frame = <div key={i} className="youtube"><iframe  width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
+              return frame;
+            })
+          }
+          {this.frame}
+
+
+    </div>
     );
   }  
 };
